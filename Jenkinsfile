@@ -6,9 +6,7 @@ pipeline {
     DEPLOY_CREDS = credentials('deploy-anypoint-user')
     MULE_VERSION = '4.2.2'
     BG = "mybusineesgroup"
-    WORKER = "Micro"
-    DEPLOY_CREDS_USR="saydm4"
-    DEPLOY_CREDS_PSW="Mountain80"
+    WORKER = "Micro"    
   }
   stages {
     stage('Build') {
