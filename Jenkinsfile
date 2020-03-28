@@ -21,10 +21,10 @@ pipeline {
       }
     }
 
-     /*stage('Deploy Development') {
+     stage('Deploy Development') {
       environment {
         ENVIRONMENT = 'Sandbox'
-        APP_NAME = 'Samplefor-cicd'
+        APP_NAME = 'Samplefor-cicd-dev'
       }
       steps {
             //bat 'mvn -U -V -e -B -X -DskipTests deploy -DmuleDeploy -Dmule.version="%MULE_VERSION%" -Danypoint.username="%DEPLOY_CREDS_USR%" -Danypoint.password="%DEPLOY_CREDS_PSW%" -Dcloudhub.app="%APP_NAME%" -Dcloudhub.environment="%ENVIRONMENT%" -Dcloudhub.bg="%BG%" -Dcloudhub.worker="%WORKER%"'
@@ -32,11 +32,11 @@ pipeline {
             bat 'mvn -U -V -e -B -X -DskipTests deploy -DmuleDeploy -Dmule.version="%MULE_VERSION%" -Danypoint.username="%DEPLOY_CREDS_USR%" -Danypoint.password="%DEPLOY_CREDS_PSW%" -Dcloudhub.app="%APP_NAME%" -Dcloudhub.environment="%ENVIRONMENT%" -Dcloudhub.worker="%WORKER%"'
       
       }
-    }*/
+    }
     stage('Deploy Production') {
       environment {
         ENVIRONMENT = 'Production'
-        APP_NAME = 'Samplefor-cicd'
+        APP_NAME = 'Samplefor-cicd-prod'
       }
       steps {
             //bat 'mvn -U -V -e -B -X -DskipTests deploy -DmuleDeploy -Dmule.version="%MULE_VERSION%" -Danypoint.username="%DEPLOY_CREDS_USR%" -Danypoint.password="%DEPLOY_CREDS_PSW%" -Dcloudhub.app="%APP_NAME%" -Dcloudhub.environment="%ENVIRONMENT%" -Dcloudhub.bg="%BG%" -Dcloudhub.worker="%WORKER%"'
