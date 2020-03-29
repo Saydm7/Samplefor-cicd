@@ -33,6 +33,12 @@ pipeline {
       
       }
     }
+    
+    stage('approval (Deploy Production)') {
+  input message: 'Approve for production?',
+    id: 'approval'
+}
+    
     stage('Deploy Production') {
       environment {
         ENVIRONMENT = 'Production'
