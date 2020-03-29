@@ -35,8 +35,10 @@ pipeline {
     }
     
     stage('approval (Deploy Production)') {
+      steps{
   input message: 'Approve for production?',
     id: 'approval'
+      }
 }
     
     stage('Deploy Production') {
